@@ -1,0 +1,1 @@
+[宣言](https://www.reactivemanifesto.org/zh-CN)

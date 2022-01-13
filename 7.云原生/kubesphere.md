@@ -1,0 +1,1 @@
+ks-install 利用CRD的方式进行安装

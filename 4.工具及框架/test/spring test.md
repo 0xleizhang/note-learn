@@ -1,0 +1,118 @@
+\# unit test
+[https://en.wikipedia.org/wiki/List\_of\_unit\_testing\_frameworks#Java](https://en.wikipedia.org/wiki/List\_of\_unit\_testing\_frameworks#Java)
+
+\##
+
+\## Junit5
+[https://junit.org/junit5/docs/current/user-guide/#overview](https://junit.org/junit5/docs/current/user-guide/#overview)
+
+\## Assertions 断言
+assertJ:
+
+[https://assertj.github.io/doc/#overview-what-is-assertj](https://assertj.github.io/doc/#overview-what-is-assertj)
+
+\# Mock
+mockito:
+
+[https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
+
+Spy vs Mock
+
+Spy Mock的如果没打桩调用原代码
+
+\# Spring test
+[https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html#testing](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html#testing)
+
+\_ReflectionTestUtils \_
+
+\_访问私有方法\_
+
+\_
+
+Bean Context
+
+\## 注解 is All
+
+\### @TestConfiguration via springboot-test
+ 等同@Configuration 今天内部类自动加载
+
+ 通过@Import
+
+\### @ContextConfiguration via spring-test
+ 引入spring 配置文件或配置类
+
+\*\*
+
+\### @SpringJUnitConfig via spring-test
+junit5 spring组合注解
+
+\### @SpringBootTest via springboot-test
+@SpringBootTest替代了spring-test中的@ContextConfiguration注解，目的是加载ApplicationContext，启动spring容器。
+
+\### @MockBean via spring-test
+[https://howtodoinjava.com/spring-boot2/testing/spring-mockbean-annotation/](https://howtodoinjava.com/spring-boot2/testing/spring-mockbean-annotation/)
+
+\# pandora-test
+
+?主要是构造一个Pandora容器
+
+也就是说测Pandora应用必须用这个
+
+[https://github.com/aliyun/alibabacloud-microservice-demo/blob/master/microservice-doc-demo/hsf-pandora-boot/hsf-pandora-boot-provider/src/test/java/com/alibaba/edas/HelloServiceTest.java](https://github.com/aliyun/alibabacloud-microservice-demo/blob/master/microservice-doc-demo/hsf-pandora-boot/hsf-pandora-boot-provider/src/test/java/com/alibaba/edas/HelloServiceTest.java)
+
+\# TDD 思想
+kent beck 先驱
+
+[https://book.douban.com/subject/1230036/](https://book.douban.com/subject/1230036/)
+
+\# BDD
+
+\# TDD in Action
+
+\# 参考
+
+[https://www.baeldung.com/injecting-mocks-in-spring](https://www.baeldung.com/injecting-mocks-in-spring)
+
+[https://www.baeldung.com/spring-boot-testing](https://www.baeldung.com/spring-boot-testing)
+
+github:
+
+[https://github.com/joshlong/bootiful-testing-online-training](https://github.com/joshlong/bootiful-testing-online-training)
+
+[https://github.com/eugenp/tutorials/tree/master/testing-modules](https://github.com/eugenp/tutorials/tree/master/testing-modules)
+
+[https://github.com/sannidhi/tdd-boot-demo](https://github.com/sannidhi/tdd-boot-demo)
+
+framework:
+
+[https://site.mockito.org/](https://site.mockito.org/) 模拟对象
+
+[http://ifeve.com/%e4%b8%80%e6%96%87%e8%ae%a9%e4%bd%a0%e5%bf%ab%e9%80%9f%e4%b8%8a%e6%89%8b-mockito-%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e6%a1%86%e6%9e%b6/](http://ifeve.com/%e4%b8%80%e6%96%87%e8%ae%a9%e4%bd%a0%e5%bf%ab%e9%80%9f%e4%b8%8a%e6%89%8b-mockito-%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e6%a1%86%e6%9e%b6/)
+
+mockito1 不支持 mock Final 类：
+
+[https://github.com/mockito/mockito/wiki/What%27s-new-in-Mockito-2#mock-the-unmockable-opt-in-mocking-of-final-classesmethods](https://github.com/mockito/mockito/wiki/What%27s-new-in-Mockito-2#mock-the-unmockable-opt-in-mocking-of-final-classesmethods)
+
+[https://easymock.org/](https://easymock.org/)
+
+video:
+
+[https://www.youtube.com/watch?v=a6TXg\_WIcIQ&list=WL&index=6&t=105s](https://www.youtube.com/watch?v=a6TXg\_WIcIQ&list=WL&index=6&t=105s)
+
+[https://www.youtube.com/watch?v=E87XhgYBM-Y&t=1432s](https://www.youtube.com/watch?v=E87XhgYBM-Y&t=1432s)
+
+[https://www.youtube.com/watch?v=EZ05e7EMOLM&t=533s](https://www.youtube.com/watch?v=EZ05e7EMOLM&t=533s)
+
+断言工具：
+
+[https://truth.dev/](https://truth.dev/)
+
+[http://hamcrest.org/JavaHamcrest/tutorial](http://hamcrest.org/JavaHamcrest/tutorial)
+
+[https://assertj.github.io/doc/#overview-what-is-assertj](https://assertj.github.io/doc/#overview-what-is-assertj)
+
+org.junit.jupiter.api.Assertions Assertion junit5 Frameworks
+
+springboot test
+
+[http://ypk1226.com/2018/11/20/spring-boot/spring-boot-test-2/](http://ypk1226.com/2018/11/20/spring-boot/spring-boot-test-2/)

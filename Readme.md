@@ -10,3 +10,5 @@ outlook
 [folder-note](https://github.com/xpgo/obsidian-folder-note-plugin)
 
 obsidian-git
+
+editor syntax highlight 

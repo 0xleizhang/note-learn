@@ -1,4 +1,4 @@
-\# architecture
+# architecture
 [architecture](https://docs.google.com/presentation/d/1HOQ2df\_AT-vIuz-JNaJol2oiGq84m50h9T49\_5WgEaI/edit#slide=id.g4a3c5dc660\_1\_359) ppt
 
 [https://raw.githubusercontent.com/kubernetes/test-infra/master/docs/architecture.svg](https://raw.githubusercontent.com/kubernetes/test-infra/master/docs/architecture.svg)
@@ -19,7 +19,7 @@ prow cli工具组件
 
 ​
 
-\# 工具包
+# 工具包
 
 \## interrupts
 和cockroachdb 的stopper有得一拼 都属于协成管理

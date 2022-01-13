@@ -2,7 +2,7 @@
 
 [https://github.com/lightningMan/flash-netty.git](https://github.com/lightningMan/flash-netty.git)
 
-![image.png](assert/1595984690138-15723c4f-454d-4d01-ba31-d057ae1d288f.png)
+![image.png](1595984690138-15723c4f-454d-4d01-ba31-d057ae1d288f.png)
 
 \# IO类型代码对比
 
@@ -71,9 +71,9 @@ public class IOClient {
 \## NIO
 NIO使用少量的线程去监听很多过个IO事件，监听到事件后，可以让其他线程去执行IO操作，也就是有专门负责监听事件的线程，那么并发量大的时候，这个线程不需要阻塞，可以一直轮训IO事件，来一个事件，后续的read等IO操作可以交给其他线程，而BIO中IO事件监听及IO操作均是由一个线程去完成，并且这个过程会阻塞，并发量大的时候只能新开启线程去处理。
 
-![](assert/1595909486204-46cd8cd1-5498-4e20-91f0-e33660df7b63.png)
+![](1595909486204-46cd8cd1-5498-4e20-91f0-e33660df7b63.png)
 
-![](assert/1595909581379-f83a5d19-d9fc-4f86-b3f9-50a7ebbeb6d1.png)
+![](1595909581379-f83a5d19-d9fc-4f86-b3f9-50a7ebbeb6d1.png)
 \`\`\`java
 /\\*\\*
  \\* @author 闪电侠
@@ -245,7 +245,7 @@ select vs poll vs epoll
 \## server模型
 
 \### event Loop
-![](assert/1595919925544-b205d09d-23e6-4c8e-b94f-0333a20ceee1.png)
+![](1595919925544-b205d09d-23e6-4c8e-b94f-0333a20ceee1.png)
 
 \### reactor pattern
 
@@ -298,7 +298,7 @@ ChannelFuture extends j.u.c.current.
 
 \# ByteBuf
 
-![image.png](assert/1595927821516-866248d2-f954-4f27-ac92-e1de3c1bd35b.png)
+![image.png](1595927821516-866248d2-f954-4f27-ac92-e1de3c1bd35b.png)
 
 byteBuf is 字节容器
 
@@ -333,7 +333,7 @@ release() 与 retain()
 
 通信协议设计 定义规则
 
-![image.png](assert/1595929298295-0660edb7-5529-409e-85be-8a4a3ef6431e.png)
+![image.png](1595929298295-0660edb7-5529-409e-85be-8a4a3ef6431e.png)
 
 魔数的作用：
 
@@ -361,7 +361,7 @@ ChannelPipeline is 双向链表 和Channel时一对一关系
 
 ChannelPipeline 节点是\`ChannelHandlerContext\`  ，Context has handler
 
-![image.png](assert/1595931209027-1e169c1b-6182-4720-b825-02f8caa2b6c2.png)
+![image.png](1595931209027-1e169c1b-6182-4720-b825-02f8caa2b6c2.png)
 
 \`ChannelInboundHandler\`  读处理 channelRead 数据从物理层上升到我们的应用层
 
@@ -403,7 +403,7 @@ public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception 
 \#### 基于长度域拆包器 LengthFieldBasedFrameDecoder
 通过魔数拒绝非我协议在此类实现，通过继承
 
-![image.png](assert/1595946106126-238a9c80-bdfe-434a-9055-78e9ba162e9f.png)
+![image.png](1595946106126-238a9c80-bdfe-434a-9055-78e9ba162e9f.png)
 
 7=4+1+1+1 偏移量
 

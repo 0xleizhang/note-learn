@@ -65,7 +65,7 @@ getBeanNamesForType这里有一个cache存储了Class和已解析BeanName的结�
 
 循环所有的BeanNames跟type做匹配
 
-![image.png](assert/1625146251641-1d30652c-037c-4fc4-b4dd-866671cde196.png)
+![image.png](1625146251641-1d30652c-037c-4fc4-b4dd-866671cde196.png)
 
 通过Bean-Name获取Bean
 

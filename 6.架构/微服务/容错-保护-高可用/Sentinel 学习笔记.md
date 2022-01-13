@@ -28,17 +28,17 @@ use nacos as data source
 \## 保护
 限流
 
-![image.png](assert/1595986437835-df1c70bc-aac2-4dd7-8efc-568d3588aff2.png)
+![image.png](1595986437835-df1c70bc-aac2-4dd7-8efc-568d3588aff2.png)
 
-![image.png](assert/1595986777333-dadc5c0a-2234-465b-a99b-80f86f56beb8.png)
+![image.png](1595986777333-dadc5c0a-2234-465b-a99b-80f86f56beb8.png)
 
 降级
 
-![image.png](assert/1595986409677-46e780f9-08b9-412a-8586-c0ec4300ea39.png)
+![image.png](1595986409677-46e780f9-08b9-412a-8586-c0ec4300ea39.png)
 
 热点保护
 
-![image.png](assert/1595986494283-61777ae1-e840-44d2-b20a-453624fc952f.png)
+![image.png](1595986494283-61777ae1-e840-44d2-b20a-453624fc952f.png)
 
 sentinel 如何区分调用者应用
 
@@ -60,7 +60,7 @@ sentinel 如何区分调用者应用
 未纳入链路管理的切入点节点
 
 \## 整体结构
-![](assert/1595986055119-73315292-ed2d-4917-8d6f-41cd9a487a10.png)
+![](1595986055119-73315292-ed2d-4917-8d6f-41cd9a487a10.png)
 
 \# 接入
 

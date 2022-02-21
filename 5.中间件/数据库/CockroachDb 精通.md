@@ -1,4 +1,4 @@
-\# 依赖知识
+# 依赖知识
 grpc
 
 编译
@@ -9,7 +9,7 @@ autoconf
 
 cmake
 
-\# 核心算法
+# 核心算法
 
 gossip
 

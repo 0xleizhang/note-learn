@@ -1,17 +1,17 @@
-\# unit test
-[https://en.wikipedia.org/wiki/List\_of\_unit\_testing\_frameworks#Java](https://en.wikipedia.org/wiki/List\_of\_unit\_testing\_frameworks#Java)
+# unit test
+[https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#Java](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#Java)
 
-\##
+##
 
-\## Junit5
+## Junit5
 [https://junit.org/junit5/docs/current/user-guide/#overview](https://junit.org/junit5/docs/current/user-guide/#overview)
 
-\## Assertions 断言
+## Assertions 断言
 assertJ:
 
 [https://assertj.github.io/doc/#overview-what-is-assertj](https://assertj.github.io/doc/#overview-what-is-assertj)
 
-\# Mock
+# Mock
 mockito:
 
 [https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
@@ -20,39 +20,39 @@ Spy vs Mock
 
 Spy Mock的如果没打桩调用原代码
 
-\# Spring test
+# Spring test
 [https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html#testing](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html#testing)
 
-\_ReflectionTestUtils \_
+_ReflectionTestUtils _
 
-\_访问私有方法\_
+_访问私有方法_
 
-\_
+_
 
 Bean Context
 
-\## 注解 is All
+## 注解 is All
 
-\### @TestConfiguration via springboot-test
+### @TestConfiguration via springboot-test
  等同@Configuration 今天内部类自动加载
 
  通过@Import
 
-\### @ContextConfiguration via spring-test
+### @ContextConfiguration via spring-test
  引入spring 配置文件或配置类
 
-\*\*
+**
 
-\### @SpringJUnitConfig via spring-test
+### @SpringJUnitConfig via spring-test
 junit5 spring组合注解
 
-\### @SpringBootTest via springboot-test
+### @SpringBootTest via springboot-test
 @SpringBootTest替代了spring-test中的@ContextConfiguration注解，目的是加载ApplicationContext，启动spring容器。
 
-\### @MockBean via spring-test
+### @MockBean via spring-test
 [https://howtodoinjava.com/spring-boot2/testing/spring-mockbean-annotation/](https://howtodoinjava.com/spring-boot2/testing/spring-mockbean-annotation/)
 
-\# pandora-test
+# pandora-test
 
 ?主要是构造一个Pandora容器
 
@@ -60,16 +60,16 @@ junit5 spring组合注解
 
 [https://github.com/aliyun/alibabacloud-microservice-demo/blob/master/microservice-doc-demo/hsf-pandora-boot/hsf-pandora-boot-provider/src/test/java/com/alibaba/edas/HelloServiceTest.java](https://github.com/aliyun/alibabacloud-microservice-demo/blob/master/microservice-doc-demo/hsf-pandora-boot/hsf-pandora-boot-provider/src/test/java/com/alibaba/edas/HelloServiceTest.java)
 
-\# TDD 思想
+# TDD 思想
 kent beck 先驱
 
 [https://book.douban.com/subject/1230036/](https://book.douban.com/subject/1230036/)
 
-\# BDD
+# BDD
 
-\# TDD in Action
+# TDD in Action
 
-\# 参考
+# 参考
 
 [https://www.baeldung.com/injecting-mocks-in-spring](https://www.baeldung.com/injecting-mocks-in-spring)
 
@@ -97,7 +97,7 @@ mockito1 不支持 mock Final 类：
 
 video:
 
-[https://www.youtube.com/watch?v=a6TXg\_WIcIQ&list=WL&index=6&t=105s](https://www.youtube.com/watch?v=a6TXg\_WIcIQ&list=WL&index=6&t=105s)
+[https://www.youtube.com/watch?v=a6TXg_WIcIQ&list=WL&index=6&t=105s](https://www.youtube.com/watch?v=a6TXg_WIcIQ&list=WL&index=6&t=105s)
 
 [https://www.youtube.com/watch?v=E87XhgYBM-Y&t=1432s](https://www.youtube.com/watch?v=E87XhgYBM-Y&t=1432s)
 

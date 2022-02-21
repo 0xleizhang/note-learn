@@ -14,7 +14,7 @@
 
  ##  配置元信息Configuration Metadata
 
-\# 
+# 
 
 # 资源管理Resource
 ●  Resource

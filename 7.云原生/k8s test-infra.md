@@ -1,5 +1,5 @@
 # architecture
-[architecture](https://docs.google.com/presentation/d/1HOQ2df\_AT-vIuz-JNaJol2oiGq84m50h9T49\_5WgEaI/edit#slide=id.g4a3c5dc660\_1\_359) ppt
+[architecture](https://docs.google.com/presentation/d/1HOQ2df_AT-vIuz-JNaJol2oiGq84m50h9T49_5WgEaI/edit#slide=id.g4a3c5dc660_1_359) ppt
 
 [https://raw.githubusercontent.com/kubernetes/test-infra/master/docs/architecture.svg](https://raw.githubusercontent.com/kubernetes/test-infra/master/docs/architecture.svg)
 
@@ -21,31 +21,31 @@ prow cli工具组件
 
 # 工具包
 
-\## interrupts
+## interrupts
 和cockroachdb 的stopper有得一拼 都属于协成管理
 
 ​
 
 ​
 
-\# 模式
+# 模式
 Interfacing a Subset of Client
 
 ​
 
-\> This client has a lot of functions listed in the interfaces of client.go. Further, these interfaces may change at any time. To avoid having to extend the entire interface, we recommend writing a local interface that uses the functionality you need.
+> This client has a lot of functions listed in the interfaces of client.go. Further, these interfaces may change at any time. To avoid having to extend the entire interface, we recommend writing a local interface that uses the functionality you need.
 
-\# 知识点
+# 知识点
 operator controller rutime 开发
 
 GitHub API
 
 prometheus & gateway
 
-\# prow core
+# prow core
 
-\## CRD
-code: config/prow/cluster/legacy/prowjob-schemaless\_customresourcedefinition.yaml
+## CRD
+code: config/prow/cluster/legacy/prowjob-schemaless_customresourcedefinition.yaml
 
 ​
 
@@ -57,7 +57,7 @@ periodics 周期性执行
 
 postsubmits(Postsubmits are run when a push event happens on a repo) push远程代码仓库
 
-presubmits 根据配置判断是否执行 \`always\_run\` \`run\_if\_changed\` .. 根据comments指令/test all 等
+presubmits 根据配置判断是否执行 `always_run` `run_if_changed` .. 根据comments指令/test all 等
 
 ​
 
@@ -67,24 +67,24 @@ plugins trigger调用
 
 ​
 
-\## plank 🌟
+## plank 🌟
 ​
 
 prowjob CRD自定义资源 controller
 
-[为什么k8s prow plank能使用OSS(阿里云)或QingStor(青云)](https://www.yuque.com/seven4x/kb/gu66p6?view=doc\_embed)
+[为什么k8s prow plank能使用OSS(阿里云)或QingStor(青云)](https://www.yuque.com/seven4x/kb/gu66p6?view=doc_embed)
 
-\### clonerefs
+### clonerefs
 
-\### initupload
+### initupload
 
-\### entrypoint
+### entrypoint
 
-\### sidercar
+### sidercar
 
-\### gcsupload
+### gcsupload
 
-\## hook 🌟
+## hook 🌟
 code:prow/cmd/hook
 
 综述；
@@ -113,15 +113,15 @@ flagset解析
 
 ​
 
-\### clients
+### clients
 
  prowjob CRD client generator by [code-generator](https://github.com/kubernetes/code-generator)
 
-\### plugins
+### plugins
 
-\#### trigger 创建prowjob
+#### trigger 创建prowjob
 
-\## tide 🌟
+## tide 🌟
 直译：趋势，潮流；潮汐
 
 合并PR & PR测试状态报告
@@ -136,43 +136,43 @@ flagset解析
 
 ​
 
-\## crier
+## crier
 英文直译：法庭传唤官
 
 一个controller watch，
 
 通过watch订阅了prowJob状态 报告状态到github slack,gcs,pub/sub(Google消息队列云服务）等
 
-\##
+##
 ​
 
 ​
 
-\##
+##
 ​
 
-\## ghproxy 🌟
+## ghproxy 🌟
 代码路径：/ghproxy
 
 github-api正向代理
 
 ghcache可以根据配置利用redis作为cache实现
 
-\##
+##
 
-\## sinker 🌟
+## sinker 🌟
 钓鱼下降铅锤
 
 清除任务，通过controller-runtime管理k8s资源
-\> controller-runtime是kubebuilder的子项目，kubebuilder是CRD的sdk与之相同的是coreOS的operatorSDK
-\> controller-runtime是核心抽象，做的本质的事情是对pod及pod属性的CRUD
-\> controller-runtime底层通过调用client-go实现pod的CRUD
+> controller-runtime是kubebuilder的子项目，kubebuilder是CRD的sdk与之相同的是coreOS的operatorSDK
+> controller-runtime是核心抽象，做的本质的事情是对pod及pod属性的CRUD
+> controller-runtime底层通过调用client-go实现pod的CRUD
 
 ​
 
 ​
 
-\## horologium 时空座
+## horologium 时空座
 用来创建周期性的prowJob
 
 ​
@@ -183,7 +183,7 @@ ghcache可以根据配置利用redis作为cache实现
 
 ​
 
-\## deck
+## deck
 甲板露台
 
 前端
@@ -192,174 +192,174 @@ ghcache可以根据配置利用redis作为cache实现
 
 ​
 
-\## exporter
+## exporter
 prometheus-exporter gateway
 
 暴露prowjob metric,这些metric和其他组件不直接相关，无法通过其他组件暴露
 
-\# optional components by prow 可选组件
+# optional components by prow 可选组件
 
-\## jenkins-operator
+## jenkins-operator
 任务运行在jenkins中
 
-\## tot
+## tot
 发号器
 
 Tot vends (rations) incrementing numbers for use in builds.
 
- https://en.wikipedia.org/wiki/Rum\_ration
+ https://en.wikipedia.org/wiki/Rum_ration
 
 ​
 
-\## status-reconciler
+## status-reconciler
  ensures changes to blocking presubmits in Prow configuration does not cause in-flight GitHub PRs to get stuck
 
 ​
 
-\## sub
+## sub
 listen to Cloud Pub/Sub notification to trigger Prow Jobs.
 
 ​
 
 ​
 
-\## gerrit
+## gerrit
 gerrit 适配
 
 ​
 
 ​
 
-\## branch protector
+## branch protector
 configures [github branch protection](https://help.github.com/articles/about-protected-branches/) according to a specified policy
 
 ​
 
 ​
 
-\## admission
+## admission
 
 ​
 
 ​
 
-\-\-\-
+---
 
-\# cli tools project by prow
+# cli tools project by prow
 
-\## config-bootstrapper
+## config-bootstrapper
 导入Prowjob配置
 
-\## tackle
+## tackle
 部署prow到K8s集群
 
 ​
 
-\## phony
+## phony
 模拟github webhook 测试用。
 
 ​
 
-\## phaino
+## phaino
 本地允许prowjob
 
 ​
 
-\## perbolos
+## perbolos
  manages GitHub org, team and membership settings according to a config file. Used by kubernetes/org
 
 ​
 
-\## mkpod
+## mkpod
 creates Pods from ProwJobs
 
 ​
 
-\## mkpj
+## mkpj
  creates ProwJobs using Prow configuration.
 
 ​
 
-\## invitations-accepter
+## invitations-accepter
 approves all pending GitHub repository invitations
 
 ​
 
 ​
 
-\## hmac
+## hmac
 更新密钥
 
-\# ​
 
-\## checkconfig
+
+## checkconfig
 检查配置
 
-\## grandmatriach
+## grandmatriach
 
-\## generic-autobumper
+## generic-autobumper
 
-\## cm2ks
+## cm2ks
 废弃
 
 ​
 
 ​
 
-\-\-\-
+---
 
-\# infra on GCP
+# infra on GCP
 ​
 
-\## Spyglass 小望远镜
+## Spyglass 小望远镜
  a pluggable artifact viewer framework for Prow.
 
 通过在deck --spyglass启用
 
 ​
 
-\## greenhouse
+## greenhouse
 是bazel build的remote cache
-\> 这个和bazel有个，bazel有增量构建的特性，有输入输出目录，对于大型项目而言这个cache很有必要。
+> 这个和bazel有个，bazel有增量构建的特性，有输入输出目录，对于大型项目而言这个cache很有必要。
 
-\## boskos
+## boskos
 资源管理
 
-\## triage
+## triage
  前端可视化
 
 ​
 
 ​
 
-\## testgrid
+## testgrid
 
-\## gubenator
+## gubenator
 
-\##
+##
 
-\## pipeline
+## pipeline
 
-\## gcsweb
+## gcsweb
 
-\## gencred
+## gencred
 
-\## gopherage
+## gopherage
  is a tool for manipulating Go coverage files.
 
-\## kettle
+## kettle
 
-\## kubetest2
+## kubetest2
 
-\## label\_sync
+## label_sync
 
-\##
+##
 
-\##
+##
 
 ​
 
-\# 部署 prow
+# 部署 prow
 bazel build
 
 ▼
@@ -368,7 +368,7 @@ build push image
 
 ▼
 
-[文档](https://github.com/kubernetes/test-infra/blob/master/prow/getting\_started\_deploy.md) manual deployment
+[文档](https://github.com/kubernetes/test-infra/blob/master/prow/getting_started_deploy.md) manual deployment
 
 准备github token
 
@@ -394,14 +394,14 @@ kubectl apply 部署集群
 
 开启tide特性 自动合并
 
-\# Glossary 词汇表
+# Glossary 词汇表
  gcs = google::cloud::storage = oss
 
  gce = goole compute engine = ecs
 
-\# 学习资料
+# 学习资料
 [Building, Managing and Automating Clusters at Scale With Prow - Michael Splain, Sonos, Inc.](https://www.youtube.com/watch?v=DFJqUMtCuEo)
 
-[KubeCon Seattle 2018 - SIG Testing Intro](https://docs.google.com/presentation/d/1HOQ2df\_AT-vIuz-JNaJol2oiGq84m50h9T49\_5WgEaI/edit#slide=id.g49782f2733\_2\_71)
+[KubeCon Seattle 2018 - SIG Testing Intro](https://docs.google.com/presentation/d/1HOQ2df_AT-vIuz-JNaJol2oiGq84m50h9T49_5WgEaI/edit#slide=id.g49782f2733_2_71)
 
 [https://kubernetes.io/zh/blog/2018/08/29/the-machines-can-do-the-work-a-story-of-kubernetes-testing-ci-and-automating-the-contributor-experience/](https://kubernetes.io/zh/blog/2018/08/29/the-machines-can-do-the-work-a-story-of-kubernetes-testing-ci-and-automating-the-contributor-experience/)

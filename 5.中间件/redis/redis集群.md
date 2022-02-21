@@ -1,4 +1,4 @@
-\# 复制(主从） replication
+# 复制(主从） replication
 从服务器执行：slaveof masterIp 6379
 
 主从复制过程：
@@ -21,7 +21,7 @@ min-slaves-to-write 3 // 服务器小于三个 拒绝写命令
 
 min-slaves-max-lag 10 // 3个从库的心跳延迟超过10秒 拒绝写
 
-\# sentinel
+# sentinel
 高可用方案
 
 sentinel本是可以是多个
@@ -36,7 +36,7 @@ sentinel连接master通过info获取slave信息
 
 建立pub-sub
 
-sentinel通过向主从服务器的\_sentinel\_:hello 频道发送消息向其他sentinel宣告自己的存在。
+sentinel通过向主从服务器的_sentinel_:hello 频道发送消息向其他sentinel宣告自己的存在。
 
 master服务器下线，sentinel集群需要选出一个master-sentinel进行操作
 
@@ -44,7 +44,7 @@ sentinel集群选举master-sentinel使用的是raft算法
 
 master-sentinel再去选一个master-server
 
-\# 集群 cluster
+# 集群 cluster
 
 ![image.png](assert/1617094665587-2ed11c88-ceb0-4562-bbd1-4c6cb119cc93.png)
 
@@ -58,9 +58,9 @@ sentinel主要解决的是主从可用性问题
 
 [slave group][ slave group]
 
-\*\*从服务设置readonly，向它才能读取\*\*
+**从服务设置readonly，向它才能读取**
 
-\## 节点
+## 节点
 通过配置 cluster-enabled 开启
 
 构建集群：
@@ -71,7 +71,7 @@ Cluster meet
 
 集群向其他节点发送Gossip消息
 
-\## 槽指派
+## 槽指派
 
 槽= 一致性hash 分组
 
@@ -79,7 +79,7 @@ Cluster meet
 
 CLUSTER ADDSLOTS [1-16384]
 
-\## ack错误与Move错误
+## ack错误与Move错误
 
 ack 转移过程中 槽节点变化
 

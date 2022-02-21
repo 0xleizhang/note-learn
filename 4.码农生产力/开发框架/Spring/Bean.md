@@ -1,10 +1,10 @@
-\# getBean过程
+# getBean过程
 总述：bean的配置信息被描述成beandefinition对象 register到context中，通过beanDefinition能够创建bean对象，getBean的过程就是根据Class type转化称beanName通过bean-name找到对应的BeanDefinition从而构造bean
 
 DefaultListableBeanFactory.getBean(Class type)
 
-\|1->resolveBean(ResolvableType type)
-\`\`\`
+|1->resolveBean(ResolvableType type)
+```
 @Nullable
  private  T resolveBean(ResolvableType requiredType, @Nullable Object[] args, boolean nonUniqueAsNull) {
  //resolveNamedBean 获取Bean
@@ -28,8 +28,8 @@ DefaultListableBeanFactory.getBean(Class type)
  }
  return null;
  }
-\`\`\`
-\*\*\|2->\*\*resolveNamedBean
+```
+**|2->**resolveNamedBean
 
 根据beanName取bean
 
@@ -37,15 +37,15 @@ DefaultListableBeanFactory.getBean(Class type)
 
 在转换成通过Bean-name获取Bean，将结果封装📦成NamedBeanHolder
 
-\|3->getBeanNamesForType() 根据是否范型 走两个分支
+|3->getBeanNamesForType() 根据是否范型 走两个分支
 
 getBeanNamesForType这里有一个cache存储了Class和已解析BeanName的结果
 
 ⚠️：Class类名相同类加载器ClassLoader不同不是同一个类（key)
-\`\`\`
+```
 @Override
  public String[] getBeanNamesForType(@Nullable Class type, boolean includeNonSingletons, boolean allowEagerInit) {
- if (!isConfigurationFrozen() \|\| type == null \|\| !allowEagerInit) {
+ if (!isConfigurationFrozen() || type == null || !allowEagerInit) {
  return doGetBeanNamesForType(ResolvableType.forRawClass(type), includeNonSingletons, allowEagerInit);
  }
  Map, String[]> cache =
@@ -60,8 +60,8 @@ getBeanNamesForType这里有一个cache存储了Class和已解析BeanName的结�
  }
  return resolvedBeanNames;
  }
-\`\`\`
-\|4->doGetBeanNamesForType()
+```
+|4->doGetBeanNamesForType()
 
 循环所有的BeanNames跟type做匹配
 
@@ -69,10 +69,10 @@ getBeanNamesForType这里有一个cache存储了Class和已解析BeanName的结�
 
 通过Bean-Name获取Bean
 
-\|-2->父类AbstractBeanFactory public  T getBean(String name, @Nullable Class requiredType, @Nullable Object... args)
+|-2->父类AbstractBeanFactory public  T getBean(String name, @Nullable Class requiredType, @Nullable Object... args)
 
-\|-2->AbstractBeanFactory.doGetBean
-\`\`\`
+|-2->AbstractBeanFactory.doGetBean
+```
 protected  T doGetBean(final String name, @Nullable final Class requiredType,
  @Nullable final Object[] args, boolean typeCheckOnly) throws BeansException {
 
@@ -145,7 +145,7 @@ protected  T doGetBean(final String name, @Nullable final Class requiredType,
  }
  catch (NoSuchBeanDefinitionException ex) {
  throw new BeanCreationException(mbd.getResourceDescription(), beanName,
- "'" \+ beanName + "' depends on missing bean '" + dep + "'", ex);
+ "'" + beanName + "' depends on missing bean '" + dep + "'", ex);
  }
  }
  }
@@ -231,23 +231,23 @@ protected  T doGetBean(final String name, @Nullable final Class requiredType,
  }
  return (T) bean;
  }
-\`\`\`
+```
 
 解决循环依赖
 
 DefaultSingletonBeanRegistry.java
-\`\`\`
+```
 
- /\\*\\*
- \\* Return the (raw) singleton object registered under the given name.
- \\*
+ /**
+ * Return the (raw) singleton object registered under the given name.
+ *
 
 Checks already instantiated singletons and also allows for an early
-\\* reference to a currently created singleton (resolving a circular reference).
-\\* @param beanName the name of the bean to look for
-\\* @param allowEarlyReference whether early references should be created or not
-\\* @return the registered singleton object, or {@code null} if none found
-\*/
+* reference to a currently created singleton (resolving a circular reference).
+* @param beanName the name of the bean to look for
+* @param allowEarlyReference whether early references should be created or not
+* @return the registered singleton object, or {@code null} if none found
+*/
 @Nullable
 protected Object getSingleton(String beanName, boolean allowEarlyReference) {
 Object singletonObject = this.singletonObjects.get(beanName);
@@ -266,4 +266,4 @@ this.singletonFactories.remove(beanName);
 }
 return singletonObject;
 }
-\`\`\`
+```

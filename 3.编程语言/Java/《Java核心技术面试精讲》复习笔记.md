@@ -1,4 +1,4 @@
-\# 类加载器
+# 类加载器
 
 [https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html)
 
@@ -24,7 +24,7 @@ SPI 上下文类加载器：
 
 Thread.current.currentThread().getContextClassLoader()
 
-\# 锁
+# 锁
 
 概念：
 

@@ -1,25 +1,25 @@
-[官方文档](https://golang.google.cn/ref/spec#Channel\_types)
+[官方文档](https://golang.google.cn/ref/spec#Channel_types)
 
-\# 语法
-操作符合只有 <\- 决定读还是写取决于 ch 变量在左还是在右
+# 语法
+操作符合只有 <- 决定读还是写取决于 ch 变量在左还是在右
 
 c <- x 在左 ⬅️写入 大概意思是 c. value from x
 
 在右 读取 x <- c 大概意思 x = get value from c
 
-\*\*助记： 与=号类似，被修改的复制变量在左\*\*
+**助记： 与=号类似，被修改的复制变量在左**
 
 c := make(chan bool) //创建一个无缓冲的bool型Channel
 
 c <- x //向一个Channel发送一个值
 
-<\- c //从一个Channel中接收一个值
+<- c //从一个Channel中接收一个值
 
 x = <- c //从Channel c接收一个值并将其存储到x中
 
 x, ok = <- c //从Channel接收一个值， ok标记是否已被close
 
-\## 关于容量
+## 关于容量
 make(chan int)
 
 make(chan int, 0)
@@ -34,7 +34,7 @@ make(chan int,100)
 
 ​
 
-\## close
+## close
 
 往一个已经被close的channel中继续发送数据会导致run-time panic。
 
@@ -42,7 +42,7 @@ make(chan int,100)
 
 close ch之后原receive 操作非阻塞取出nil值，ok标记是否close
 
-\## 关于读写方向
+## 关于读写方向
 ​
 
  Done() chan <- struct{} 写

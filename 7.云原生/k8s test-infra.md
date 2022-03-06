@@ -3,7 +3,10 @@
 
 [https://raw.githubusercontent.com/kubernetes/test-infra/master/docs/architecture.svg](https://raw.githubusercontent.com/kubernetes/test-infra/master/docs/architecture.svg)
 
-![architecture.svg](https://cdn.nlark.com/yuque/0/2021/svg/290656/1625823299413-2bc1804a-4ff0-4f6b-9d7b-f1dc3acd07af.svg#height=1535&id=UB1I6&margin=%5Bobject%20Object%5D&name=architecture.svg&originHeight=1535&originWidth=1891&originalType=binary&ratio=1&size=28469&status=done&style=none&width=1891)
+
+
+![[architecture.svg]]
+
 
 将组件分成四类
 

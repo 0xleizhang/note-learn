@@ -171,7 +171,17 @@ ghcache可以根据配置利用redis作为cache实现
 > controller-runtime是核心抽象，做的本质的事情是对pod及pod属性的CRUD
 > controller-runtime底层通过调用client-go实现pod的CRUD
 
-​
+
+
+[[controller-runtime]] 使用的是实现Start方法的 controller 而不是 Reconcile ，他们之间的关系，
+controller是reconcile的模版代码，controller回调用reconcile
+代码参见：`sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go`
+
+
+[相关watch原理](https://www.likakuli.com/posts/kubernetes-apiserver-watch/#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86kube-apiserver%E7%9A%84watch-restful-api)
+
+apiserver 对 etcd的watch
+conttroller 对 apiserver的[watch  http chunked 实现](https://mp.weixin.qq.com/s/FOVjzOtwgeSOnuC_HsQF_w)
 
 ​
 

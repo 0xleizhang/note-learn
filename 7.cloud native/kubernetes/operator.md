@@ -10,4 +10,4 @@ operator可以理解是操作k8s api的客户端
 高级操作=>低级操作 体现了概念的抽象 体现了应用程序的封装
 
 \## 开发生命流程图
-![image.png](assert/1624938483363-3c2c528e-e3d2-4b12-9723-1aef6ac2a17f.png)
+![image.png](1624938483363-3c2c528e-e3d2-4b12-9723-1aef6ac2a17f.png)

@@ -75,7 +75,7 @@ OWNERS 文件定义review人和审批人 由prow使用
 
 [https://github.com/kubernetes/kubernetes/pull/92152](https://github.com/kubernetes/kubernetes/pull/92152)
 
-![image.png](assert/1638283596689-72eeca8a-1cd9-4706-ba22-db9e538be31c.png)
+![image.png](1638283596689-72eeca8a-1cd9-4706-ba22-db9e538be31c.png)
 
 第二次提交
 
@@ -90,7 +90,7 @@ OWNERS 文件定义review人和审批人 由prow使用
 \## 知识点
 通过LD 链接 设置的staging/src/k8s.io/apimachinery/pkg/version/types.go
 
-![image.png](assert/1638330137774-875edd36-5990-4235-bc62-d5ed81b57b93.png)
+![image.png](1638330137774-875edd36-5990-4235-bc62-d5ed81b57b93.png)
 
 ​
 

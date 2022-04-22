@@ -34,9 +34,9 @@ docker-shim
 
 cri-o
 
-![image.png](assert/1639039778688-0e940155-e940-4a50-ba58-e06115988337.png)
+![image.png](1639039778688-0e940155-e940-4a50-ba58-e06115988337.png)
 
-![image.png](assert/1639040090674-eba64056-9621-4d0f-ba61-0fd5b591772a.png)
+![image.png](1639040090674-eba64056-9621-4d0f-ba61-0fd5b591772a.png)
 
 kubernetes 目前：
 

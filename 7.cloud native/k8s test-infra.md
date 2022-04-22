@@ -5,7 +5,7 @@
 
 
 
-![[assert/architecture.svg]]
+![[architecture.svg]]
 
 
 将组件分成四类

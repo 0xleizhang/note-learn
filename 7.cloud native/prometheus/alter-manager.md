@@ -2,7 +2,7 @@
 
 ​
 
-![image.png](assert/1640922442743-45fd5ca3-9e01-48ae-b336-f9b4710ae800.png)
+![image.png](1640922442743-45fd5ca3-9e01-48ae-b336-f9b4710ae800.png)
 
 \# prometheus部分
 
@@ -39,7 +39,7 @@ scrape\_interval 采集周期 evaluation\_interval 计算周期
 ​
 
 \# alter-manager部分
-![image.png](assert/1640922805051-da63a6fc-be7a-4172-b5a2-cd34400ecc05.png)
+![image.png](1640922805051-da63a6fc-be7a-4172-b5a2-cd34400ecc05.png)
 
 ​
 

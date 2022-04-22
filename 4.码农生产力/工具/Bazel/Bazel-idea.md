@@ -1,0 +1,1 @@
+Error:(35, 20) in java_library rule //src/go/compass.com/people/thrift/profile:service: target '//src/java/com/urbancompass/grpc/stub:stub' is not visible from target '//src/go/compass.com/people/thrift/profile:service'. Check the visibility declaration of the former target if you think the dependency is legitimate

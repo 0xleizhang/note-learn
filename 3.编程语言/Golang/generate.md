@@ -1,12 +1,12 @@
 ​
 
 安装
-\`\`\`
+```
 seven@sevendeMacBook-Pro ~ % go get golang.org/x/tools/cmd/stringer
 go: downloading golang.org/x/tools v0.1.7
 go: found golang.org/x/tools/cmd/stringer in golang.org/x/tools v0.1.7
 go: downloading golang.org/x/sys v0.0.0-20210809222454-d867a43fc93e
-\`\`\`
+```
 
 使用
 

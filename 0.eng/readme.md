@@ -1,0 +1,1 @@
+ old note location https://www.yuque.com/seven4x/rnbowt

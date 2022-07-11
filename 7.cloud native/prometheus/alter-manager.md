@@ -1,24 +1,24 @@
-整体架构
+# 整体架构
 
 ​
 
 ![image.png](1640922442743-45fd5ca3-9e01-48ae-b336-f9b4710ae800.png)
 
-\# prometheus部分
+# prometheus部分
 
 告警配置示例
-\`\`\`sql
+```sql
 groups:
-\- name: example
+ - name: example
  rules:
- \- alert: mysql\_uptime
- expr: mysql:server\_status:uptime < 30
+  - alert: mysql_uptime
+ expr: mysql:server_status:uptime < 30
  for: 10s
  labels:
  level: "CRITICAL"
  annotations:
  detail: 数据库运行时间
-\`\`\`
+```
 
 \- inactive：没有触发阈值
 \- pending：已触发阈值但未满足告警持续时间 expr = ture && < for
@@ -38,7 +38,7 @@ scrape\_interval 采集周期 evaluation\_interval 计算周期
 
 ​
 
-\# alter-manager部分
+# alter-manager部分
 ![image.png](1640922805051-da63a6fc-be7a-4172-b5a2-cd34400ecc05.png)
 
 ​

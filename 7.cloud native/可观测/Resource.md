@@ -3,7 +3,7 @@
  
 * OpenTelemetry
 * OpenTracing
-* OpenCensus
+* 
 * OpenMetrics prometheus
 * OpenObservability 并不存在
 

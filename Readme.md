@@ -1,11 +1,9 @@
-
-
-迁移自：[语雀](https://www.yuque.com/seven4x/kb)
+迁移自：[语雀](https://www.yuque.com/seven4x/kb)  个人学习笔记知识库
 
 ob plugin:
 
-## Sepolia Merge Announcement
-Note: on July 5, 2022, the recommended releases for go-ethereum and Erigon were modified. See “Client Releases” for details. Sepolia will be the second of three public testnets to run through The Merge. The network will transition to proof-of-stake when the total difficulty on the proof-of-work chain exceeds 17,000,000,000,000,000, which...auto-note-mover
+```
+auto-note-mover
 calendar
 cm-editor-syntax-highlight-obsidian
 code-block-copy
@@ -45,7 +43,10 @@ table-editor-obsidian
 templater-obsidian
 url-into-selection
 
+```
 
+
+# find me
 
 Blog: [https://bitseatech.cn](https://bitseatech.cn)
 
@@ -63,7 +64,7 @@ B站: [https://space.bilibili.com/284623903](https://space.bilibili.com/28462390
 
 公众号：bugtalks 
 
-![image.png](assert/1612509189954-518e00cd-5fab-411b-bd8a-154e24fbdbde.png)
+![image.png](1612509189954-518e00cd-5fab-411b-bd8a-154e24fbdbde.png)
 
 
 

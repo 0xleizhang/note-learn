@@ -8,4 +8,7 @@
 
 
 
-# 状态数
+# 状态树
+
+
+压缩的merke tire tree ，讲交易集合hash 成一个值写到header里

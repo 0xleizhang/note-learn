@@ -1,10 +1,10 @@
-\# 1 明明有类却仍然报NoSuchBeanDefinitionException
+# 1 明明有类却仍然报NoSuchBeanDefinitionException
 devtools导致的类加载器不同
-\`\`\`
+```
  org.springframework.bootspring-boot-devtoolsruntimetrue
-\`\`\`
+```
 
-\# 2
+# 2
 ![image.png](1625023842177-853c20aa-9561-47d5-b661-8fc956fe1ceb.png)
 
 com.alibaba.schedulerx.worker.master.persistence.H2ConnectionPool

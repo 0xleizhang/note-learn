@@ -2,10 +2,10 @@
 
 2 第二 填充的=号 转义成%3D 再反转异常 [https://www.codenong.com/6916805/](https://www.codenong.com/6916805/)
 
-\`\`\`
+```
  public static void main(String[] args) throws UnsupportedEncodingException {
  String str = "sflsfsldfasdfsadfsadfsa as";
- byte[] encode = Base64.getEncoder().encode(str.getBytes(StandardCharsets.UTF\_8));
+ byte[] encode = Base64.getEncoder().encode(str.getBytes(StandardCharsets.UTF_8));
  String s = new String(encode, "utf-8");
  System.out.println(s);
  byte[] decode = Base64.getDecoder().decode(s);
@@ -29,4 +29,4 @@
  HttpGet request = new HttpGet(builder.build());
  return request.getURI().toString();
  }
-\`\`\`
+```

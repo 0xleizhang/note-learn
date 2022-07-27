@@ -1,10 +1,10 @@
-\*\*
+**
 
-[📎threads\_report.txt](https://yuque.antfin.com/attachments/lark/0/2020/txt/314166/1595227630204-e8640183-fdfd-4379-b075-6dea2282cb41.txt)
+[📎threads_report.txt](https://yuque.antfin.com/attachments/lark/0/2020/txt/314166/1595227630204-e8640183-fdfd-4379-b075-6dea2282cb41.txt)
 
 通过thread dump分析看到发生了死锁
 
-\# 过程分析：
+# 过程分析：
 spring容器启动refresh过程中DefaultSingletonBeanRegistry.getSingleton 通过synchronized加了锁（图一 0x4989）
 
 继续往下执行，AnnotationBean这个 BeanPostProcessor扫描需要dubbo处理的类，包括装配标有dubbo @ Reference注解的远程bean
@@ -15,12 +15,12 @@ spring容器启动refresh过程中DefaultSingletonBeanRegistry.getSingleton 通
 
 话说回来，其实如果dubbo将将future.get()换成带超时参数的get(long timeout, TimeUnit unit) 就不会阻塞主线程了。
 
-\# 推论：
+# 推论：
 如果主线程在装配bean过程中阻塞了，则schedulerx的任务就无法正常处理，还可能的场景包括装配bean需要访问数据库数据库不通导致阻塞。
 
 为了理解以上过程简化模拟代码：
 
-\`\`\`java
+```java
 public class Demo {
  private HashMap map = new HashMap();
  static Demo demo = new Demo();
@@ -85,14 +85,14 @@ public class Demo {
  }
  }
 }
-\`\`\`
+```
 
-\# 解决办法：
+# 解决办法：
 如果想做到无论主线程bean装配是否成功都不影响定时任务processor执行。
 
 可以让processor类在SchedulerxWorker类装配之前就初始化装配好，这样当任务下发getBean的过程中就直接能从cache中取bean,不需要加锁了，如图5，图6
 
-\# 附件：
+# 附件：
 
 
 图一

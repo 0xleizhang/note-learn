@@ -1,18 +1,18 @@
 demo table
 
-create demo\_data (
+create demo_data (
 
- \`id\` bigint(20) NOT NULL AUTO\_INCREMENT,
+ `id` bigint(20) NOT NULL AUTO_INCREMENT,
 
- \`name\` varchar(255) DEFAULT NULL,
+ `name` varchar(255) DEFAULT NULL,
 
- \`age\` tinyint(4) DEFAULT NULL,
+ `age` tinyint(4) DEFAULT NULL,
 
- \`create\_time\` datetime DEFAULT NULL,
+ `create_time` datetime DEFAULT NULL,
 
- \`update\_time\` datetime DEFAULT NULL,
+ `update_time` datetime DEFAULT NULL,
 
- PRIMARY KEY (\`id\`)
+ PRIMARY KEY (`id`)
 
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -20,19 +20,19 @@ create demo\_data (
 
 ​
 
-\# 错误描述
+# 错误描述
 ​
 
 ​
 
-\# 两个错误
+# 两个错误
 select id,name
 
-from demo\_data offset 0,100 order by datetime
+from demo_data offset 0,100 order by datetime
 
 select id,name
 
-from demo\_data offset 10000,100 order by datetime
+from demo_data offset 10000,100 order by datetime
 
 ​
 
@@ -46,15 +46,15 @@ from demo\_data offset 10000,100 order by datetime
 
 ​
 
-\# 正确方式
+# 正确方式
 
 SELECT id,name
 
- FROM demo\_data
+ FROM demo_data
 
  WHERE
 
- AND id < ?last\_seen\_id
+ AND id < ?last_seen_id
 
  ORDER BY id DESC
 

@@ -5,8 +5,16 @@ output_list = [output_exp for var in input_list if (var satisfies this condition
 ```
 
 ## Dictionary
+
+迭代dict
 ```
 output_dict = {key:value for (key, value) in iterable if (key, value satisfy this condition)}
+```
+
+迭代 list
+```
+{row['id']:row for row in list}
+
 ```
 
 

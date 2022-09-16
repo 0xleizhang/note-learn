@@ -28,3 +28,12 @@ https://github.com/cnsilvan/UnblockNeteaseMusic （golang server）
 
 node server 
 https://github.com/UnblockNeteaseMusic/server
+
+
+
+
+# 脚本
+https://github.com/cnsilvan/UnblockNeteaseMusic
+```
+ UnblockNeteaseMusic -p 5210 -sp 5211 -o kuwo -m 0 -c /usr/share/UnblockNeteaseMusic/server.crt -k /usr/share/UnblockNeteaseMusic/server.key -l /tmp/unblockneteasemusic.log -sl 0
+```

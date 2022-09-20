@@ -5,7 +5,7 @@
 docker build -t seven4d/jellyfin:arm64 .
 
 
-
+cd /usr/lib/jellyfin-ffmpeg/
 ffmpeg -hwaccels
 
 
@@ -37,3 +37,21 @@ ffmpeg -hwaccels
 ```
 
 ![[jellyfin-convert.png]]
+
+
+
+
+# 硬件 未解决 求真历程
+
+
+开始以为自己用的官方镜像没有驱动
+
+用docker buildx 重新构建了https://hub.docker.com/r/nyanmisaka/jellyfin   这个镜像的arm64/v8版  ，不行
+
+以为是启动权限问题 改了docker run 命令，不行
+
+最后发现是ffmpeg的问题，https://github.com/jellyfin/jellyfin-ffmpeg/pull/160 
+需要ffmpeg 支持R5S的CPU #[rkmpp](https://blog.csdn.net/fanyun_01/article/details/126089637)
+完了用这个PR的版本build了ffmpeg 如最后PR下面留言的 及时ffmpeg支持了arm64还需要jellyfin后台要改，生成的ffmpeg命令需要带上对应的硬解参数。
+
+这个R5用的显卡是是SOC集成在CPU中的，rockchip 瑞芯

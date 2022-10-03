@@ -20,7 +20,7 @@
 
 本质上都是通过 [devtools protocol](https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF) 与浏览器后端通信，各种库充当的是client的角色
 
-原公有云方案：
+# 公有云方案：
 
 后台上传json data 到OSS -->
 
@@ -38,7 +38,7 @@ fc 触发器 执行nodejs脚本 [项目](https://code.aone.alibaba-inc.com/middl
 
 后台消费MQ知道报告执行完成
 
-专有云方案：
+# 专有云方案：
 
 定时任务触发Java任务->
 

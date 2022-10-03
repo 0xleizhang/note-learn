@@ -1,6 +1,6 @@
 **并发编程可以总结为三个核心问题：分工、同步、互斥**
 
-**![](assert/1597113578885-4d0db648-01b1-4554-8190-2f64a1ac6a32.png)
+**![](1597113578885-4d0db648-01b1-4554-8190-2f64a1ac6a32.png)
 
 # 理类基础
 
@@ -60,7 +60,7 @@ MESA 模型
 
 线程状态：
 
-![](assert/1597130050059-4c0941bc-b9ac-48bd-ba67-d88f3bb1af63.png)
+![](1597130050059-4c0941bc-b9ac-48bd-ba67-d88f3bb1af63.png)
 
 最佳线程数=CPU核数 * [ 1 +（I/O耗时 / CPU耗时）]
 
@@ -106,7 +106,7 @@ countDown() 方法减数
 
 await() 阻塞减为0时执行
 
-![image.png](assert/1597159020151-385d0772-7aa4-4cf5-9a7e-81cb83279543.png)
+![image.png](1597159020151-385d0772-7aa4-4cf5-9a7e-81cb83279543.png)
 
 ## CyclicBarrier 循环屏障
 构造函数设置计数 和回调
@@ -115,10 +115,10 @@ await() 调用次数 达到计数，可以执行await后的代码，同时执行
 
 自动重置计数
 
-![image.png](assert/1597158856623-2bb17af1-11f3-49a6-9ac1-a309a45c62bd.png)
+![image.png](1597158856623-2bb17af1-11f3-49a6-9ac1-a309a45c62bd.png)
 
 ## 并发容器
-![](assert/1597209416409-c7eae193-20c5-4523-afba-a13eb688e177.png)
+![](1597209416409-c7eae193-20c5-4523-afba-a13eb688e177.png)
 
 _
 
@@ -130,7 +130,7 @@ compare and swap
 
 CAS+自旋 =无所原子操作
 
-![](assert/1597210132204-455934d8-b6f2-47b1-9658-4507c68538aa.png)
+![](1597210132204-455934d8-b6f2-47b1-9658-4507c68538aa.png)
 
 ## 线程池
 线程池执行过程？
@@ -139,7 +139,7 @@ Java中的线程池是生产消费模型
 
 ThreadPoolExecutor使用太麻烦所以才有了Excutors工具类辅助创建线程池
 
-![](assert/1597212458929-216e972b-5221-4808-9f42-7c3e0de39738.png)
+![](1597212458929-216e972b-5221-4808-9f42-7c3e0de39738.png)
 
 ## Future
 like 提货单
@@ -200,7 +200,7 @@ Entry为软引用WeakReference
 
 源码阅读：dubbo DefaultFuture
 
-![](assert/1597226787326-9d3ffdb8-fe48-4d6c-8c7d-5c777655fbb9.png)
+![](1597226787326-9d3ffdb8-fe48-4d6c-8c7d-5c777655fbb9.png)
 
 get里wait
 
@@ -217,12 +217,12 @@ synchriozed 快速失败。
 协程创建轻快完全可以干掉线程池方式的
 
 ### 2 Worker Thread模式
-![](assert/1597228098131-ad384f04-c71c-4773-9eea-20ac6bf4a0fa.png)
+![](1597228098131-ad384f04-c71c-4773-9eea-20ac6bf4a0fa.png)
 
 **提交到相同线程池中的任务一定是相互独立的，否则就一定要慎重**。
 
 ### 3 生产者-消费者模式
-![](assert/1597229211640-96a3c260-4f79-47e4-94bd-de55edec9609.png)
+![](1597229211640-96a3c260-4f79-47e4-94bd-de55edec9609.png)
 
 削峰填谷，批量消费
 
@@ -244,7 +244,7 @@ shutdownNow()
 ## Actor并发模型
 akka scala
 
-![image.png](assert/1597241560714-932d8ae9-4ea1-4e3b-b7fc-831d58e910d6.png)
+![image.png](1597241560714-932d8ae9-4ea1-4e3b-b7fc-831d58e910d6.png)
 
 ## 软件事务内存（Software Transactional Memory，简称STM
 仿照数据库MVCC（Multi-Version Concurrency Control）多版本并发控制
@@ -264,6 +264,6 @@ Java Loom
 
 # 总结
 
-![image.png](assert/1597243595841-48e57fef-cc5a-4ad2-acdd-6cd633ab1d54.png)
+![image.png](1597243595841-48e57fef-cc5a-4ad2-acdd-6cd633ab1d54.png)
 
-![image.png](assert/1597243613812-a71fd9a4-0604-458c-af85-051678f255f7.png)
+![image.png](1597243613812-a71fd9a4-0604-458c-af85-051678f255f7.png)

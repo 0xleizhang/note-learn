@@ -18,7 +18,7 @@ initialization 初始化
 
 双亲委派模型？：parent翻译叉劈
 
-![image.png](assert/1597152756364-98f9da2d-f280-4179-806f-d3699055cc55.png)
+![image.png](1597152756364-98f9da2d-f280-4179-806f-d3699055cc55.png)
 
 SPI 上下文类加载器：
 
@@ -36,7 +36,7 @@ Thread.current.currentThread().getContextClassLoader()
 
 自旋 ，读写
 
-![image.png](assert/1597154545598-5f94092b-29be-4b22-96ff-988e06809211.png)
+![image.png](1597154545598-5f94092b-29be-4b22-96ff-988e06809211.png)
 
 synchronized实现原理？
 
@@ -48,13 +48,13 @@ synchronized锁升级过程？
 
 [https://www.cnblogs.com/soul-keeper/p/12762344.html](https://www.cnblogs.com/soul-keeper/p/12762344.html)
 
-![image.png](assert/1597155095623-06886869-c1ea-4245-b8cd-855592c7ec39.png)
+![image.png](1597155095623-06886869-c1ea-4245-b8cd-855592c7ec39.png)
 
 sync的四种状态： 无锁 VS 偏向锁 VS 轻量级锁 VS 重量级锁
 
 通过对象头标记
 
-![image.png](assert/1597154709694-68bbdde7-90ca-4e58-85ad-c1676ead1e65.png)
+![image.png](1597154709694-68bbdde7-90ca-4e58-85ad-c1676ead1e65.png)
 
 synchronized和ReentrantLock的区别？
 

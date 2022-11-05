@@ -1,24 +1,33 @@
 
 让你会用并且明白背后的原理
 
+
+
 # 解决的问题及产品簇
 
 ## 涉及的 AWS service 和技术组件
+
+
 1. https://docs.aws.amazon.com/zh_cn/organizations/?id=docs_gateway
 2. https://docs.aws.amazon.com/zh_cn/singlesignon/?id=docs_gateway
 3. https://docs.aws.amazon.com/zh_cn/iam/?id=docs_gateway
 
+---
 https://github.com/victorskl/yawsso
+
 https://github.com/uswitch/kiam
 
+---
 ## 何为权限控制（权限控制的场景）
 
 本质控制的是对API及关联资源的访问
 
 A公司 -> B 公司 
+ 
+
 A 公司多个部门
 A公司a部门#1员工
-
+---
 
 ## 何为API的访问：
 1. Endpoint https://docs.aws.amazon.com/zh_cn/general/latest/gr/rande.html

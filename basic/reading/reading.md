@@ -16,6 +16,12 @@ kanban-plugin: basic
 
 ## 在读
 
+- [ ] software engineering at google
+- [ ] 现代操作系统导论
+- [ ] 自制编译器
+- [ ] 深入探索Go语言
+- [ ] Go语言精进之路
+- [ ] 100 Go mistakes
 
 
 ## 已读
